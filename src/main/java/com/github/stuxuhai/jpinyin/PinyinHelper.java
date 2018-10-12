@@ -85,13 +85,14 @@ public final class PinyinHelper {
         // 将拼音中的ü替换为v
         pinyinArray = pinyinArrayString.replace("ü", "v").split(PINYIN_SEPARATOR);
 
-        // 去掉声调后的拼音可能存在重复，做去重处理
-        LinkedHashSet<String> pinyinSet = new LinkedHashSet<String>();
-        for (String pinyin : pinyinArray) {
-            pinyinSet.add(pinyin);
-        }
+        //*** remove ***
+//        // 去掉声调后的拼音可能存在重复，做去重处理
+//        LinkedHashSet<String> pinyinSet = new LinkedHashSet<String>();
+//        for (String pinyin : pinyinArray) {
+//            pinyinSet.add(pinyin);
+//        }
 
-        return pinyinSet.toArray(new String[pinyinSet.size()]);
+        return pinyinArray;
     }
 
     /**
